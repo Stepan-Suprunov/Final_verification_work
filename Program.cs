@@ -1,23 +1,31 @@
-﻿string[] array = {"Final", "verification", "vork", ":-)"};
-
-for (int i = 0; i < array.Length; i++)
+﻿void PrintArray(string[] collection)
 {
-    Console.Write(array[i] + " ");
+    for (int i = 0; i < collection.Length; i++)
+    {
+        Console.Write(collection[i] + " ");
+    }
+    Console.WriteLine();
 }
 
+string[] array = { "Final", "verification", "vork", ":-)" };
+
 int count = 0;
-for (int j = 0; j < array.Length; j++)
+for (int i = 0; i < array.Length; i++)
 {
-    if (array[j].Length <= 3) count++;
+    if (array[i].Length <= 3) count++;
 }
 
 string[] newArray = new string[count];
 int countNew = 0;
-for (int k = 0; k < array.Length; k++)
+for (int j = 0; j < array.Length; j++)
 {
-    if(array[k].Length <= 3)
+    if (array[j].Length <= 3)
     {
-        newArray[countNew] = array[k];
+        newArray[countNew] = array[j];
         countNew++;
     }
 }
+
+PrintArray(array);
+Console.WriteLine("----------");
+PrintArray(newArray);
